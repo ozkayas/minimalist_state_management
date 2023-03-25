@@ -152,7 +152,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       floatingActionButton: FloatingActionButton(onPressed: () {
 
-        getIt.get<ListViewState>().addPostTapped(postToAdd);
+        getIt.get<ListViewState>().postsNotifier.addPostTapped(postToAdd);
 
       },
       child: const Icon(Icons.add),
