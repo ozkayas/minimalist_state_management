@@ -87,17 +87,17 @@ MyListViewNotifier postsNotifier = MyListViewNotifier([const Post(
 
 }
 
-class MyListViewNotifier extends ValueNotifier<List<Post>>{
+class MyListViewNotifier<T> extends ValueNotifier<List<T>>{
   MyListViewNotifier(super.value);
 
-  void postRemoveTapped(Post post){
+  void postRemoveTapped(T post){
     value.remove(post);
     value = List.from(value);
     print(value);
 
   }
 
-  void addPostTapped(Post post){
+  void addPostTapped(T post){
     value.add(post);
     // value = [...value];
     notifyListeners();
