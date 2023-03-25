@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:minimalist_state_management/appbar_icon.dart';
 import 'package:minimalist_state_management/counter_state.dart';
+import 'package:minimalist_state_management/list_view_state.dart';
+import 'package:minimalist_state_management/post.dart';
 import 'package:minimalist_state_management/service_locator.dart';
+import 'package:minimalist_state_management/list_view_container.dart';
 
 import 'counter_text.dart';
 
@@ -34,6 +37,15 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
+  Post postToAdd = const Post(
+    userId: 99,
+    id: 99,
+    title: "Kara Kartal",
+    body: "dadfafasdfafadfasdfadfadf",
+  );
+
+
   @override
   void initState() {
     super.initState();
@@ -130,9 +142,22 @@ class _MyHomePageState extends State<MyHomePage> {
                   state.resetCounter();
                 },
                 child: const Icon(Icons.refresh)),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.6,
+              child:const ListViewContainer(),
+            ),
+
           ],
         ),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      ),
+      floatingActionButton: FloatingActionButton(onPressed: () {
+
+        getIt.get<ListViewState>().addPostTapped(postToAdd);
+
+      },
+      child: const Icon(Icons.add),
+
+      ),// This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
