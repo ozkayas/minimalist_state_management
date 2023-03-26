@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:minimalist_state_management/counter_state.dart';
-import 'package:minimalist_state_management/service_locator.dart';
+import 'package:minimalist_state_management/features/counter/counter_state.dart';
+import 'package:minimalist_state_management/services/service_locator.dart';
 
 class CounterText extends StatelessWidget {
   const CounterText({

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:minimalist_state_management/list_view_state.dart';
-import 'package:minimalist_state_management/post.dart';
-import 'package:minimalist_state_management/service_locator.dart';
+import 'package:minimalist_state_management/features/post_list_view/list_view_state.dart';
+import 'package:minimalist_state_management/models/post.dart';
+import 'package:minimalist_state_management/services/service_locator.dart';
 
 class ListViewContainer extends StatelessWidget {
   const ListViewContainer({Key? key}) : super(key: key);

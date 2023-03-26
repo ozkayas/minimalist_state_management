@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:minimalist_state_management/appbar_icon.dart';
-import 'package:minimalist_state_management/counter_state.dart';
-import 'package:minimalist_state_management/list_view_state.dart';
-import 'package:minimalist_state_management/post.dart';
-import 'package:minimalist_state_management/service_locator.dart';
-import 'package:minimalist_state_management/list_view_container.dart';
+import 'package:minimalist_state_management/features/counter/widgets/appbar_icon.dart';
+import 'package:minimalist_state_management/features/counter/counter_state.dart';
+import 'package:minimalist_state_management/features/post_list_view/list_view_state.dart';
+import 'package:minimalist_state_management/models/post.dart';
+import 'package:minimalist_state_management/services/service_locator.dart';
+import 'package:minimalist_state_management/features/post_list_view/list_view_container.dart';
 
-import 'counter_text.dart';
+import 'features/counter/counter_text.dart';
 
 void main() {
   initGetIt();
